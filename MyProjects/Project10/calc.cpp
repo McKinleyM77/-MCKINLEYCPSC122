@@ -68,13 +68,15 @@ void Calc::Parse(char* exp)
         valueTbl[valueIdx] = num;
         valueIdx++;
         inFix[inFixCt++] = 'A' + valueIdx - 1;
-        cout << "atm " << inFix[i] << " at i " << i << " with val " << exp[i] << endl;
+        cout << inFix[i] << i << exp[i] << endl;
       } 
       else 
       {
         inFix[inFixCt++] = exp[i];
       }
     }
+  for (int i = 0; i < valueIdx; i++)
+    cout << valueTbl[valueIdx]l << endl;
 }
 
 bool Calc::CheckParens(char *exp) {
